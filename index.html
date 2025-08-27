@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="" class="css" />
+    <title>My Arkwright Project</title>
+    <script async src="scripts/main.js" defer></script>
+  </head>
+
+  <body>
+    <h1>dice game</h1>
+    <input type="text" id="myInput" oninput="storeName()" />
+    <button onclick="generateNumber(1)">Roll dice</button>
+    <br />
+    <input type="text" id="myInput2" oninput="storeNameP2()" />
+    <button onclick="generateNumber(2)">Roll dice</button>
+    <div id="p1score"></div>
+    <div id="p2score"></div>
+  </body>
+</html>
