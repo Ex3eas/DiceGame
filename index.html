@@ -5,17 +5,79 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="" class="css" />
     <title>My Arkwright Project</title>
+    <style>
+      .rollbutton {
+        right: 600px;
+        size: 10;
+        position: absolute;
+      }
+      .rollbutton {
+        width: 250px;
+      }
+      .btntostopgame {
+        right: 600px;
+        top: 130px;
+        position: absolute;
+      }
+      .btntostopgame {
+        width: 250px;
+      }
+      .btntoreset {
+        right: 600px;
+        top: 180px;
+        position: absolute;
+      }
+      .btntoreset {
+        width: 250px;
+      }
+      .P2name {
+        position: absolute;
+        right: 300px;
+        top: 80px;
+      }
+      #p2score {
+        position: absolute;
+        right: 300px;
+        top: 100px;
+      }
+
+      p.rules {
+        margin-top: 200px;
+        margin-left: 600px;
+        margin-right: 200px;
+        margin-left: 50px;
+        text-align: center;
+      }
+    </style>
     <script async src="scripts/main.js" defer></script>
   </head>
 
   <body>
     <h1>Dice Game</h1>
+
     <input type="text" id="myInput" oninput="storeName()" />
-    <button onclick="generateNumber(1)">Roll dice</button>
+    <button
+      class="rollbutton"
+      id="play"
+      onclick="generateNumber(1); generateNumber(2)"
+    >
+      Roll dice
+    </button>
+    <button id="endgame" class="btntostopgame" onclick="end()">
+      Stop Game
+    </button>
+    <button id="reset" class="btntoreset" onclick="window.location.reload()">
+      Reset Game
+    </button>
     <br />
-    <input type="text" id="myInput2" oninput="storeNameP2()" />
-    <button onclick="generateNumber(2)">Roll dice</button>
+    <input type="text" id="myInput2" class="P2name" oninput="storeNameP2()" />
     <div id="p1score"></div>
     <div id="p2score"></div>
+
+    <p class="rules">
+      This is an Endless rolling dice game where 2 players roll how many times
+      they want and stop when they want, making sure to compare the scores at
+      the end. I hope you enjoy the game!
+    </p>
   </body>
 </html>
