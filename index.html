@@ -48,6 +48,21 @@
         margin-left: 50px;
         text-align: center;
       }
+      body {
+        background-color: cadetblue;
+      }
+
+      .winnerDisplay {
+        position: absolute;
+        top: 220px;
+        left: 550px;
+        right: 100px;
+      }
+      .winnerDisplay {
+        font-size: 30px;
+        font-weight: bold;
+        color: gold;
+      }
     </style>
     <script async src="scripts/main.js" defer></script>
   </head>
@@ -59,7 +74,7 @@
     <button
       class="rollbutton"
       id="play"
-      onclick="generateNumber(1); generateNumber(2)"
+      onclick="generateNumber(1); generateNumber(2); hiderules()"
     >
       Roll dice
     </button>
@@ -73,8 +88,9 @@
     <input type="text" id="myInput2" class="P2name" oninput="storeNameP2()" />
     <div id="p1score"></div>
     <div id="p2score"></div>
+    <div id="Winner" class="winnerDisplay"></div>
 
-    <p class="rules">
+    <p class="rules" id="rulestext">
       This is an Endless rolling dice game where 2 players roll how many times
       they want and stop when they want, making sure to compare the scores at
       the end. I hope you enjoy the game!

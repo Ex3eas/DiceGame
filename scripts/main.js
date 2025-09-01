@@ -8,6 +8,15 @@ function end() {
   const btn = document.getElementById("play");
   btn.disabled = true;
   console.log(" The Game has been Stopped ");
+  const game_winner = document.getElementById("Winner");
+  if (playerOneScore > playerTwoScore) {
+    game_winner.innerHTML = playerOneName + " wins! ";
+  } else {
+    game_winner.innerHTML = playerTwoName + " wins! ";
+  }
+  if (playerOneScore === playerTwoScore) {
+    game_winner.innerHTML = " its a tie ";
+  }
 }
 
 function generateNumber(player) {
@@ -51,4 +60,7 @@ function storeNameP2() {
   const input2 = document.getElementById("myInput2");
   const inputValue2 = input2.value;
   playerTwoName = inputValue2;
+}
+function hiderules() {
+  document.getElementById("rulestext").style.display = "none";
 }
