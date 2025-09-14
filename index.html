@@ -70,7 +70,12 @@
   <body>
     <h1>Dice Game</h1>
 
-    <input type="text" id="myInput" oninput="storeName()" />
+    <input
+      type="text"
+      id="myInput"
+      placeholder="Enter Player 1 Name"
+      oninput="storeName()"
+    />
     <button
       class="rollbutton"
       id="play"
@@ -85,7 +90,13 @@
       Reset Game
     </button>
     <br />
-    <input type="text" id="myInput2" class="P2name" oninput="storeNameP2()" />
+    <input
+      type="text"
+      id="myInput2"
+      class="P2name"
+      placeholder="Enter Player 2 Name"
+      oninput="storeNameP2()"
+    />
     <div id="p1score"></div>
     <div id="p2score"></div>
     <div id="Winner" class="winnerDisplay"></div>
