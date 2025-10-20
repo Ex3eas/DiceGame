@@ -38,7 +38,7 @@ function generateNumber(player) {
     playerOneScore += scoreChange;
     playerOneScore = Math.max(playerOneScore, 0);
     console.log(playerOneName + " rolled " + randomNumber);
-    console.log(playerOneName + "score is " + playerOneScore);
+    console.log(playerOneName + " score is " + playerOneScore);
     const playerOneScoreDiv = document.getElementById("p1score");
     playerOneScoreDiv.innerHTML =
       playerOneName + " 's score is " + playerOneScore;
